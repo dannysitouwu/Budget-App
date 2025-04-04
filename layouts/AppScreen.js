@@ -49,8 +49,9 @@ const MainScreen = ({ navigation }) => {
           <Ionicons name="stats-chart-outline" size={24} color="white" />
           <Text style={styles.footerText}>Statistic</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.footerButton}>
-          <Ionicons name="add-circle-outline" size={24} color="white" />
+        <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate('ExpenseDescription')}>
+          <Ionicons name="calculator-outline" size={24} color="white" />
+          {/* <Ionicons name="add-circle-outline" size={24} color="white" /> */}
           <Text style={styles.footerText}>Spent</Text>
         </TouchableOpacity>
       </View>
