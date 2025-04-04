@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
+
 // SupaBaseClient
 import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = 'https://lueckcjjjsjwiesapqhs.supabase.co'
@@ -14,8 +15,8 @@ export default function LoginScreen({ navigation }) {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = async () => {
+    
     const { user, error } = await supabase.auth.signInWithPassword({
-      uuid,
       email,
       password,
     });
@@ -87,7 +88,7 @@ export default function LoginScreen({ navigation }) {
 
         {/* Login Button */}
         <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
-          <Text style={styles.loginButtonText}>LOG IN</Text>
+          <Text style={styles.loginButtonText}>Log in</Text>
         </TouchableOpacity>
 
         {/* <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
@@ -98,7 +99,7 @@ export default function LoginScreen({ navigation }) {
         <View style={styles.signupContainer}>
           <Text style={styles.noAccountText}>Don't have an account?</Text>
           <TouchableOpacity onPress={()=> navigation.navigate('SignInScreen')}>
-            <Text style={styles.signupText}> SIGN UP</Text>
+            <Text style={styles.signupText}> Sign Up</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -121,6 +122,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 26,
     fontWeight: 'bold',
+    marginBottom: 20,
   },
   subText: {
     color: 'white',
