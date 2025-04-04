@@ -16,9 +16,9 @@ export default function AppNavigator() {
         <Stack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false }} />
         {/* <Stack.Screen name="LogIn" component={LoginScreen} options={{ headerShown: false }} /> */}
         <Stack.Screen name="Start" component={StartScreen} options={{ headerShown: false }} />
-        
         <Stack.Screen name="Main" component={MainScreen} options={{ headerShown: false }} />
         <Stack.Screen name="SignInScreen" component={SignInScreen} options={{ headerShown: false }} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
