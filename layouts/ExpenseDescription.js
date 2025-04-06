@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, TextInput, Alert } from 'react-native';
 
-export default function ValueInputScreen({ navigation }) {
+export default function ExampleDescription({ navigation }) {
   const [value, setValue] = useState('');
 
   const handlePress = (num) => {
