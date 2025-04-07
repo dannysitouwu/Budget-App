@@ -28,7 +28,7 @@ export default function LoginScreen({ navigation }) {
     }
 
     console.log('Usuario autenticado:', user);
-    navigation.navigate('Main');
+    navigation.navigate('Main'); // Navega a la pantalla principal después de iniciar sesión
   };
 
   const handleSignUp = async () => {

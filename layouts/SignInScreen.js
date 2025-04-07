@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView, Alert } from 'react-native';
+import MainScreen from './AppScreen';
+// import AppNavigator from '../AppNavigator';
+// import { useNavigation } from '@react-navigation/native';
 import { createClient } from '@supabase/supabase-js';
 
 // supa client
@@ -55,7 +58,8 @@ export default function SignInScreen({ navigation }) {
         placeholderTextColor="#aaa"
         secureTextEntry
       />
-      <TouchableOpacity style={styles.signUpButton} onPress={handleSignUp}>
+      <TouchableOpacity style={styles.signUpButton} onPress={()=> navigation.navigate('MainScreen')}>
+        {onPress={handleSignUp}}
         <Text style={styles.signUpButtonText}>SIGN UP</Text>
       </TouchableOpacity>
     </SafeAreaView>
